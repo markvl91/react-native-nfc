@@ -40,4 +40,10 @@ NFC.addListener = (callback) => {
     _registerToEvents();
 };
 
+NFC.removeListener = (callback) => {
+    if(_listeners.includes(callback)) {
+        _listeners.splice(_listeners.indexOf(callback));
+    }
+};
+
 export default NFC;
